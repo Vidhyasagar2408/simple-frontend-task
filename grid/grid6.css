@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-areas: "topleft left right rigthup"
+                         "centerleft center center ritghdown"
+                         "centerleft center center rigthdown"
+                         "bottomleft bottomleft bottomright rigthdown";
+
+    gap: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+.topleft{
+    background-color: deeppink;
+    border-radius: 10px;
+    grid-area: topleft;
+    background-image: url(./discount.png);
+    background-size: cover;
+    background-position: 70% 70% ;
+}
+
+.left{
+    background-color: blue;
+    border-radius: 10px;
+    grid-area: left;
+    background-image: url(./fonty.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.rigth{
+    background-color: green;
+    border-radius: 10px;
+    grid-area: right;
+    background-image: url(./board.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.rigthup{
+    background-color: yellow;
+    border-radius: 10px;
+    grid-area: rigthup;
+    grid-row: 1 / span 2;
+    background-image: url(./balls.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.rigthdown{
+    background-color: purple;
+    border-radius: 10px;
+    grid-area: rigthdown;
+    grid-row: 2 / span ;
+    background-image: url(./bottle.png);
+    background-size: cover;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.center{
+    background-color: orange;
+    border-radius: 10px;
+    grid-area: center;
+    background-image: url(./f.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.centerleft{
+    background-color: pink;
+    border-radius: 10px;
+    grid-area: centerleft;
+    background-image: url(./phone.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.bottomleft{
+    background-color: brown;
+    border-radius: 10px;
+    grid-area: bottomleft;
+    background-image: url(./billboard.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
+.bottomright{
+    background-color: gray;
+    border-radius: 10px;
+    grid-area: bottomright;
+    background-image: url(./quote.png);
+    background-size: cover;
+    background-position: center center ;
+}
+
