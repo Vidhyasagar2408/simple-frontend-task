@@ -1,0 +1,230 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: #1d1d1d;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section.view1 .top {
+  width: 100%;
+}
+main section.view1 .top img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main section.view1 .btm {
+  background-color: #343434;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view1 .btm p {
+  opacity: 0.5;
+}
+main section.view1 .btm .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.view1 .btm .txt h1 {
+  font-weight: 200;
+  font-size: 3rem;
+}
+main section.view1 .btm .txt p {
+  font-weight: 300;
+  opacity: 0.8;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+main section.view1 .btm .txt button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+}
+main section.view2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+main section.view2 .top, main section.view2 .btm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+main section.view2 .top .element, main section.view2 .btm .element {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view2 .top .element small, main section.view2 .btm .element small {
+  opacity: 0.5;
+  font-size: 1rem;
+}
+main section.view2 .top .element h2, main section.view2 .btm .element h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+main section.view3 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section.view3 .top {
+  width: 100%;
+}
+main section.view3 .top img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main section.view3 .btm {
+  background-color: #343434;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+main section.view3 .btm .txt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section.view3 .btm .txt h1 {
+  font-weight: 200;
+  font-size: 3rem;
+}
+main section.view3 .btm .txt p {
+  font-weight: 300;
+  opacity: 0.8;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+main section.view3 .btm .txt button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+}
+
+section {
+  max-width: 2000px;
+}
+
+@media (min-width: 900px) {
+  main section.view1 {
+    flex-direction: row;
+    padding: 1rem 4rem;
+  }
+  main section.view1 .top, main section.view1 .btm {
+    width: 50%;
+  }
+  main section.view1 .btm {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  main section.view2 {
+    flex-direction: row;
+    padding: 1rem 4rem;
+  }
+  main section.view3 {
+    flex-direction: row-reverse;
+  }
+  main section.view3 .top, main section.view3 .btm {
+    width: 50%;
+  }
+  main section.view3 .btm {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  main section.view3 .btm .paragraphs {
+    display: flex;
+    gap: 2rem;
+  }
+  main section.view3 .btm .paragraphs p {
+    font-size: 1rem;
+  }
+  main section.view4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  main section.view4 .card {
+    width: 100%;
+    background-image: url(./portrait.webp);
+    background-size: cover;
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  main section.view4 .card .icon, main section.view4 .card .btm {
+    background-color: rgb(139, 139, 139);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 0.7rem;
+  }
+  main section.view4 .card .top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  main section.view4 .card .icon {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main section.view4 .card .btm {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+  }
+  main section.view4 .card .btm p {
+    text-transform: uppercase;
+  }
+}/*# sourceMappingURL=style.css.map */

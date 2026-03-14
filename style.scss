@@ -1,0 +1,256 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    color: white;
+    font-size: clamp(14px, 1vw, 18px);
+}
+
+body{
+    background-color: #1d1d1d;
+}
+
+@mixin flex-column($gap: 0rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+main{
+    width: 100%;
+    @include flex-column(1rem);
+
+    section.view1{
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 1rem;
+            }
+        }
+
+        .btm{
+                background-color: #343434;
+                border-radius: 1rem;
+                padding: 1.5rem;
+                @include flex-column(1rem);
+
+                p{
+                    opacity: 0.5;
+                }
+
+                .txt{
+                    @include flex-column(1.5rem);
+
+
+                    h1{
+                        font-weight: 200;
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        font-weight: 300;
+                        opacity: 0.8;
+                        line-height: 1.5;
+                        font-size: 1.5rem;
+                        opacity: 0.5;
+                    }
+
+                    button{
+                        width: fit-content;
+                        border: none;
+                        border-radius: 1rem;
+                        padding: 0.7rem 1rem;
+                        outline: none;
+                    }
+                }
+            }
+    }
+
+    section.view2{
+        @include flex-column(1.5rem);
+        width: 100%;
+        padding: 1rem;
+
+        .top,.btm{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+
+            .element{
+                text-align: center;
+                @include flex-column(1rem);
+
+                small{
+                    opacity: 0.5;
+                    font-size: 1rem;
+                }
+                h2{
+                    font-size: 2rem;
+                    font-weight: 300;
+
+                }
+            }
+        }
+    }
+
+    section.view3{
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(2rem);
+        
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 1rem;
+            }
+        }
+
+        .btm{
+            background-color: #343434;
+            border-radius: 1rem;
+            padding: 1rem;
+            
+            .txt{
+                    @include flex-column(1.5rem);
+
+
+                    h1{
+                        font-weight: 200;
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        font-weight: 300;
+                        opacity: 0.8;
+                        line-height: 1.5;
+                        font-size: 1.5rem;
+                        opacity: 0.5;
+                    }
+
+                    button{
+                        width: fit-content;
+                        border: none;
+                        border-radius: 1rem;
+                        padding: 0.7rem 1rem;
+                        outline: none;
+                    }
+                }
+        }
+    }
+}
+
+section{
+    max-width: 2000px;
+}
+
+@media (min-width:900px){
+    main{
+
+        section.view1{
+            flex-direction: row;
+            padding: 1rem 4rem;
+
+            .top,.btm{
+                width: 50%;
+            }
+
+            .btm{
+                justify-content: space-between;
+                padding: 3rem;
+            }
+        }
+
+        section.view2{
+            flex-direction: row;
+            padding: 1rem 4rem;
+        }
+
+        section.view3{
+            flex-direction: row-reverse;
+
+            .top,.btm{
+                width: 50%;
+            }
+
+            .btm{
+                justify-content: space-between;
+                padding: 3rem;
+
+                .paragraphs{
+                    display: flex;
+                    gap: 2rem;
+
+                    p{
+                        font-size: 1rem;
+                        
+                    }
+                }
+            }
+        }
+
+        section.view4{
+            @include flex-column(2rem);
+            gap: 2rem;
+            width: 100%;
+            padding: 1rem;
+            
+            .card{
+                width: 100%;
+                background-image: url(./portrait.webp);
+                background-size: cover;
+                aspect-ratio: 1/1;
+                border-radius: 1rem;
+
+                @include flex-column(1rem);
+                justify-content: space-between;
+                padding: 1rem;
+
+                .icon,.btm{
+                    background-color: rgb(139, 139, 139);
+                    backdrop-filter: blur(5px);
+                    border: 1px solid white;
+                    border-radius: 1rem;
+                    padding: 0.7rem;
+                }
+
+                .top{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 1rem;
+                }
+
+                .icon{
+                    width: fit-content;
+                }
+
+                .btm{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 2rem 1rem;
+
+                    p{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
